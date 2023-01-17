@@ -1,19 +1,10 @@
-interface SearchRepositoriesAction {
-    type: ActionType.SEARCH_REPOSITORIES;
+export enum UserActionType {
+    REGISTER_REQUEST = 'USERS_REGISTER_REQUEST',
+    REGISTER_SUCCESS = 'USERS_REGISTER_SUCCESS',
+    REGISTER_FAILURE = 'USERS_REGISTER_FAILURE',
+
+
+    LOGIN_REQUEST = 'USERS_LOGIN_REQUEST',
+    LOGIN_SUCCESS = 'USERS_LOGIN_SUCCESS',
+    LOGIN_FAILURE = 'USERS_LOGIN_FAILURE',
 }
-
-interface SearchRepositoriesSuccessAction {
-    type: ActionType.SEARCH_REPOSITORIES_SUCCESS;
-    payload: string[];
-}
-
-interface SearchRepositoriesErrorAction {
-    type: ActionType.SEARCH_REPOSITORIES_ERROR;
-    payload: string;
-}
-
-export type Action =
-    | SearchRepositoriesAction
-    | SearchRepositoriesSuccessAction
-    | SearchRepositoriesErrorAction;
-
